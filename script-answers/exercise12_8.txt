@@ -1,0 +1,57 @@
+Script started on 2024-09-30 14:39:56+00:00 [TERM="xterm" TTY="/dev/pts/0" COLUMNS="120" LINES="30"]
+# mongosh
+]0;mongosh mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	66fab8490abb1c0c87964032
+Connecting to:		[1m[32mmongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.1[0m
+Using MongoDB:		8.0.0
+[1m[33mUsing Mongosh[0m:		2.3.1
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+
+To help improve our products, anonymous usage data is collected and sent to MongoDB periodically (https://www.mongodb.com/legal/privacy-policy).
+You can opt-out by running the disableTelemetry() command.
+
+[1G[0J [1G[1G[0Jtest> [7Gshow dbs
+Uncaught [1m[31mMongoServerError[0m[1m[31m[Unauthorized][0m: Command listDatabases requires authentication
+[1G[0Jtest> [7Gadmin[1G[0Jtest> admi[11G[1G[0Jtest> adm[10G[1G[0Jtest> ad[9G[1G[0Jtest> a[8G[1G[0Jtest> [7Gexit
+# mongosh -u root -= p example
+]0;mongosh mongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000Current Mongosh Log ID:	66fab8aa0cd949366c964032
+Connecting to:		[1m[32mmongodb://<credentials>@127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.3.1[0m
+Using MongoDB:		8.0.0
+[1m[33mUsing Mongosh[0m:		2.3.1
+
+For mongosh info see: https://www.mongodb.com/docs/mongodb-shell/
+
+[1G[0J [1G[1m[33m------[0m
+   [1m[33mThe server generated these startup warnings when booting[0m
+   2024-09-30T14:37:18.505+00:00: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine. See http://dochub.mongodb.org/core/prodnotes-filesystem
+   2024-09-30T14:37:19.571+00:00: For customers running the updated tcmalloc-google memory allocator, we suggest setting the contents of sysfsFile to 'defer+madvise'
+   2024-09-30T14:37:19.571+00:00: We suggest setting the contents of sysfsFile to 0.
+   2024-09-30T14:37:19.571+00:00: Your system has glibc support for rseq built in, which is not yet supported by tcmalloc-google and has critical performance implications. Please set the environment variable GLIBC_TUNABLES=glibc.pthread.rseq=0
+   2024-09-30T14:37:19.571+00:00: vm.max_map_count is too low
+   2024-09-30T14:37:19.571+00:00: We suggest setting swappiness to 0 or 1, as swapping can cause performance problems.
+[1m[33m------[0m
+
+[1G[0Jtest> [7Gshow dbs
+[1madmin[0m         100.00 KiB
+[1mconfig[0m         48.00 KiB
+[1mlocal[0m          72.00 KiB
+[1mthe_database[0m   40.00 KiB
+[1G[0Jtest> [7Guse the_da[1G[0Jtest> use the_d[16Gatabase
+switched to db the_database
+[1G[0Jthe_database> [15Gshow collections
+[1mtodos[0m
+[1G[0Jthe_database> [15Gdb.todos.find({})
+[
+  {
+    _id: ObjectId([32m'66f850ddfa5e3d7247964033'[39m),
+    text: [32m'Write code'[39m,
+    done: [33mtrue[39m
+  },
+  {
+    _id: ObjectId([32m'66f850ddfa5e3d7247964034'[39m),
+    text: [32m'Learn about containers'[39m,
+    done: [33mfalse[39m
+  }
+]
+[1G[0Jthe_database> [15Gdb.todos.insertOne()[1G[0Jthe_database> db.todos.insertOne([34G{text[33mtext[39m: [32m'[39m[32mI[39m[32mn[39m[32mc[39m[32mr[39m[32me[39m[32ma[39m[32ms[39m[32me[39m [32mn[39m[32mt[39m[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m'Increase n[39m[52G[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m'Increase [39m[51G[32mt[39m[32mh[39m[32me[39m [32mn[39m[32mu[39m[32mb[39m[32mm[39m[32me[39m[32mr[39m[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m'Increase the nubme[39m[60G[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m'Increase the nubm[39m[59G[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m'Increase the nub[39m[58G[1G[0Jthe_database> db.todos.insertOne({[33mtext[39m: [32m'Increase the nu[39m[57G[32mm[39m[32mb[39m[32me[39m[32mr[39m [32mo[39m[32mf[39m [32mt[39m[32mo[39m[32mo[39m[32ml[39m[32
